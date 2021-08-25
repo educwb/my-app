@@ -1,2 +1,29 @@
+MÓDULO 30 (React.js - Básico)
+
 yarn add react-router-dom @material-ui/core
 yarn add @material-ui/icons
+
+https://reqres.in/
+
+yarn add axios
+
+useEffect(() =>{
+    axios.get('https://reqres.in/api/users')
+      .then(response => {
+        console.log(response)
+      })
+  }, [])
+
+  useEffect(() =>{
+    axios.get('https://reqres.in/api/users')
+      .then(response => console.log(response))
+  }, [])
+
+  https://material-ui.com/pt/components/container/
+
+  AULA LISTANDO USUÁRIOS
+  https://material-ui.com/pt/components/cards/
+  https://material-ui.com/pt/api/card-header/
+  https://material-ui.com/pt/components/avatars/
+
+  git commit -m "Primeiro carregamento de Customers usando axios / useState"
