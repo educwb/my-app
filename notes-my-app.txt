@@ -43,3 +43,9 @@ LG = LARGE
 XL = EXTRA LARGE
 
 git commit -m "Usando Grid"
+________________________________________________________________________________________________________________________________
+AULA ABSTRAINDO O TÍTULO
+
+https://material-ui.com/pt/components/typography/
+
+import Typography from '@material-ui/core/Typography';
