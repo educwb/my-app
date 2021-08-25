@@ -27,3 +27,19 @@ useEffect(() =>{
   https://material-ui.com/pt/components/avatars/
 
   git commit -m "Primeiro carregamento de Customers usando axios / useState"
+________________________________________________________________________________________________________________________________
+AULA GRID
+yarn add classnames
+
+https://material-ui.com/pt/components/grid/
+https://www.npmjs.com/package/classnames
+
+import Grid from '@material-ui/core/Grid'
+
+XS = EXTRA SMALL
+SM = SMALL
+MD = MEDIUM
+LG = LARGE
+XL = EXTRA LARGE
+
+git commit -m "Usando Grid"
