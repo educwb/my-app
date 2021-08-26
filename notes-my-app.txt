@@ -49,3 +49,11 @@ AULA ABSTRAINDO O TÍTULO
 https://material-ui.com/pt/components/typography/
 
 import Typography from '@material-ui/core/Typography';
+________________________________________________________________________________________________________________________________
+AULA MENU DRAWER
+
+https://material-ui.com/pt/components/drawers/
+https://material-ui.com/pt/components/material-icons/
+
+git commit -m "Menu Drawer"
+________________________________________________________________________________________________________________________________

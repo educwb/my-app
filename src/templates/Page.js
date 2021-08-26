@@ -8,6 +8,8 @@ const useStyles = makeStyles(() => ({
 }))
 
 const Page = ({ title, Component }) => {
+  const classes = useStyles()
+  
   return (
     <>
       <Typography variant="h3">
