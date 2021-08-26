@@ -52,18 +52,28 @@ const Header = () => {
       </AppBar>
       <Drawer open={menuOpen} onClose={() => handleToggleMenu()}>
         <List>
+
           <ListItem button onClick={() => handleMenuClick('/')}>
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
             <ListItemText>Home</ListItemText>
           </ListItem>
+
           <ListItem button onClick={() => handleMenuClick('/customers')}>
+            <ListItemIcon>
+              <PersonIcon />
+            </ListItemIcon>
+            <ListItemText>Lista de Clientes</ListItemText>
+          </ListItem>
+
+          <ListItem button onClick={() => handleMenuClick('/customers/add')}>
             <ListItemIcon>
               <PersonAddIcon />
             </ListItemIcon>
             <ListItemText>Cadastro de Clientes</ListItemText>
           </ListItem>
+
         </List>
       </Drawer>
     </>
