@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { makeStyles } from '@material-ui/core/styles'
-import TextField from '@material-ui/core/TextField'
-import Button from '@material-ui/core/Button'
+
+import { TextField, Button} from '@material-ui/core'
+
+import Toasty from '../../components/Toasty'
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -13,12 +15,6 @@ const useStyles = makeStyles((theme) => ({
 const Register = () => {
   const classes = useStyles()
 
-  // o useState 'form' é um exemplo de como devemos fazer para alterar
-  //  o estado de vários campos em um único useState
-
-  // forma individual comentada abaixo
-  // const [name, setName] = useState('Eduardo')
-  // const [job, setJob] = useState('')
   const [form, setForm] = useState({
     name: {
       value: '',
@@ -31,22 +27,16 @@ const Register = () => {
       helperText: '',
     },
   })
-  
-  // exemplo de como fazer a validação de campo separadamente
-  //  colocando error.name como propriedade no TextField
-  // const [error, setError] = useState({
-  //   name: true,
-  //   job: false,
-  // })
+
+  const [openToasty, setOpenToasty] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleInputChange = (e) => {
     console.log(e)
     const { name, value } = e.target
 
     setForm({
-      // para manter o que já tinha e alterar só o que chegar no momento
       ...form,
-      // [name] é nome da propriedade de forma dinâmica que chega no 'target'
       [name]: {
         value,
       },
@@ -55,6 +45,8 @@ const Register = () => {
   }
 
   const handleRegisterButton = () => {
+    setIsLoading(true)
+
     let hasError = false
 
     const newFormState = {
@@ -88,8 +80,9 @@ const Register = () => {
     axios.post('https://reqres.in/api/users', {
       name: form.name.value,
       job: form.job.value,
-    }).then((response) => {
-      console.log('Success', response)
+    }).then(() => {
+      setOpenToasty(true)
+      setIsLoading(false)
     })
   }
 
@@ -120,10 +113,18 @@ const Register = () => {
       </div>
 
       <div className={classes.wrapper}>
-        <Button variant="contained" color="primary" onClick={handleRegisterButton}>
-          Cadastrar
+        <Button variant="contained" color="primary" onClick={handleRegisterButton} disabled={isLoading}>
+          {
+            isLoading ? 'Aguarde...' : 'Cadastrar'
+          }
         </Button>
       </div>
+      <Toasty 
+        open={openToasty} 
+        severity="success" 
+        text="Cadastro realizado com sucesso!"
+        onClose={() => setOpenToasty(false)}
+      />
     </>
   )
 }

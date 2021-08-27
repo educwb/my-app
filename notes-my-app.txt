@@ -87,3 +87,27 @@ https://material-ui.com/components/buttons/
 
 git commit -m "adicionando Cadastro - Lidando com Formularios"
 ________________________________________________________________________________________________________________________________
+AULA Cadastro - Integração com a API
+
+git commit -m "Cadastro - Validacao de campos e Integracao com a API"
+________________________________________________________________________________________________________________________________
+AULA SnackBar - Toasty
+
+yarn add @material-ui/lab
+
+https://material-ui.com/components/snackbars/
+https://material-ui.com/components/progress/
+
+Desafio - implementar o recurso Progress abaixo como componente
+<div className={classes.wrapper}>
+  <Button
+    variant="contained"
+    color="primary"
+    className={buttonClassname}
+    disabled={loading}
+    onClick={handleButtonClick}
+  >
+    Accept terms
+  </Button>
+  {loading && <CircularProgress size={24} className={classes.buttonProgress} />}
+</div>
