@@ -12,6 +12,9 @@
     "rio",
     "usu",
     "usuario",
-    "usuário"
-  ]
+    "usuário",
+    "validacao"
+  ],
+  "[javascriptreact]": {"editor.autoClosingBrackets": "always"},
+  "[javascript]": {"editor.autoClosingBrackets": "always"}
 }
