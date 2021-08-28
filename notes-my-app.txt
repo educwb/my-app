@@ -111,3 +111,7 @@ Desafio - implementar o recurso Progress abaixo como componente
   </Button>
   {loading && <CircularProgress size={24} className={classes.buttonProgress} />}
 </div>
+________________________________________________________________________________________________________________________________
+MÓDULO 31 - AULA Context API - Parte 1
+
+https://pt-br.reactjs.org/docs/context.html
